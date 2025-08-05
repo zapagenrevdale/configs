@@ -47,6 +47,7 @@ This repository contains my personal dotfiles and configuration files for variou
 - [Oh My Zsh](https://ohmyz.sh/) - Zsh framework
 - [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - Smart cd command
+- [Oh My Tmux](https://github.com/gpakosz/.tmux) - Tmux configuration framework
 
 ## Customization
 
