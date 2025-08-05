@@ -137,3 +137,12 @@ source $ZSH/oh-my-zsh.sh
 
 # opencode
 export PATH=/home/genrev/.opencode/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+export CARGO_TARGET_DIR=~/.cargo/target
+
+# fnm
+FNM_PATH="/home/genrev/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
