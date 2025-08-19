@@ -76,7 +76,7 @@ plugins=(
   cp
   docker
   docker-compose
-  dotenv
+  # dotenv
   emoji
   fnm
   fzf
@@ -91,6 +91,7 @@ plugins=(
   snap
   ssh
   ssh-agent
+  # sudo
   tailscale
   terraform
   tmux
@@ -146,3 +147,12 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+eval "$(fnm env --use-on-cd)"
+alias python=python3
+
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+export PATH=$PATH:/home/genrev/minio-binaries
+
